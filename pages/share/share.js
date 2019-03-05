@@ -38,7 +38,7 @@ Page({
   bindSeeResult: function () {
     //console.log(wx.getStorageSync('shared'))
     var shared = wx.getStorageSync('shared')
-    if (shared == true || shared == false){
+    if (shared == true){
       wx.navigateTo({
         url: '../result/result',
       })
