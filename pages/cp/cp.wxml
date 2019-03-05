@@ -1,0 +1,68 @@
+<!--pages/login/login.wxml-->
+<view class="page">
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="page__hd">
+      <view class="page__title">
+        <!--
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        -->
+        <image bindtap="bindViewTap" src="{{userImageSource}}" style="width: 50px; height: 50px; display: block"/>
+      </view>
+      <view class="page__desc">{{wechatAccount}}</view>
+    </view>
+
+    <view class="weui-cells__title">你的信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd" style="width: 105px">
+          <picker bindchange="bindGenderSelectionChange1" value="{{user1.genderIndex}}" range="{{user1.genderSelection}}">
+            <view class="weui-select">{{user1.genderSelection[user1.genderIndex]}}</view>
+          </picker>
+        </view>
+        <view class="weui-cell__bd weui-cell__bd_in-select-before">
+          <input bindchange="bindNameInput1" class="weui-input" placeholder="你的名字" value="{{user1.userName}}"/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">生日</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{user1.date}}" start="1950-09-01" end="2017-09-01" bindchange="bindDateChange1">
+            <view class="weui-input">{{user1.date}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">TA的信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd" style="width: 105px">
+          <picker bindchange="bindGenderSelectionChange2" value="{{user2.genderIndex}}" range="{{user2.genderSelection}}">
+            <view class="weui-select">{{user2.genderSelection[user2.genderIndex]}}</view>
+          </picker>
+        </view>
+        <view class="weui-cell__bd weui-cell__bd_in-select-before">
+          <input bindchange="bindNameInput2" class="weui-input" placeholder="TA的名字" value="{{user2.userName}}"/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">生日</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{user2.date}}" start="1950-09-01" end="2017-09-01" bindchange="bindDateChange2">
+            <view class="weui-input">{{user2.date}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="page__bd page__bd_spacing" id="test_button_area">
+      <button class="weui-btn" type="primary" formType="submit" bindtap="bindOnSubmit">测一测你和TA的匹配指数</button>
+    </view>
+
+  </form>
+</view>

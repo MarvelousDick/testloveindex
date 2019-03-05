@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" id="login" class="weui-btn" type="default" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击登陆 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text bindtap="textBindViewTap" class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="page__bd" id="introduction_area">
+    <view class="weui-article">
+      <view class="weui-article__section">
+        <view class="weui-article__section">
+          <view class="weui-article__p" id="text_part">
+            这世上有一种感觉叫爱，爱是缘，被爱是份，缘随天意，份却在人为，缘分是前世临终时的感情延续，缘分是此生轮回前不变的誓言，缘分是你我曾说过的幸福的约定，缘分是再做人时还能在一起的美好梦想。 姓名配对缘分测试，缘分是男女爱情的开始，缘有多深，爱就有多深，缘有多长，情就有多远。 您是否还对您的爱情犹豫不决啊，那就进来看看你们的姓名配不配，根据情侣名字测试您和恋人的缘分和婚姻！
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing" id="start_to_test">
+    <button class="weui-btn" type="primary" bindtap="bindOnStart">开始测试吧！</button>
+  </view>
+
+</view>

@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/result/result",
+    "pages/cp/cp",
+    "pages/share/share"    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "缘分指数测试",
+    "navigationBarTextStyle": "black"
+  }
+}

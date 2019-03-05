@@ -1,0 +1,12 @@
+/* pages/share/share.wxss */
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 60%;
+}
+.mini-btn{
+    margin-right: 5px;
+}
+#button_field{
+    margin-top: 100px;
+}

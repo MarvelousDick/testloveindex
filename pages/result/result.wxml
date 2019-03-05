@@ -1,0 +1,25 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__desc">你与TA的缘分指数是</view>
+    <view class="page__title">{{showingPoint}}分</view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <view class="weui-progress">
+      <view class="weui-progress__bar">
+        <progress percent="{{progress}}" stroke-width="30" />
+      </view>
+    </view>
+    <view class="weui-article">
+      <view class="weui-article__h1">{{matchJson.title}}</view>
+      <view class="weui-article__section">
+        <view class="weui-article__section">
+          <view class="weui-article__p">{{matchJson.text}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <button class="weui-btn" type="primary" bindtap="bindBackToCP">重新测试</button>
+  </view>
+    <ad unit-id="adunit-bf0c4b9891f3c645"></ad>
+</view>

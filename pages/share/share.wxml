@@ -1,0 +1,13 @@
+<!--pages/share/share.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">分享小程序</view>
+    <view class="page__desc">分享给你的好友吧</view>
+    <!-- <view class="page__desc">分享给好友之后即可看到你和TA的缘分指数</view> -->
+  </view>
+  <view class="page__bd page__bd_spacing" id="button_field">
+    <button open-type="share" class="weui-btn" type="primary">分享</button>
+    <button bindtap="bindSeeResult" class="weui-btn" type="primary">查看结果</button>
+  </view>
+  <ad unit-id="adunit-bf0c4b9891f3c645"></ad>
+</view>
